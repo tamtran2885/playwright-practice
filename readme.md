@@ -1,4 +1,4 @@
-## Playwright Information
+## Playwright Test Automation
 
 ### 1. What is Playwright?
 
@@ -20,13 +20,67 @@ Playwright is a Node.js library to automate Chromium, Firefox, and WebKit with a
 - Wide variety of selectors (locators) & shadow-dom support
 - Can handle single page application
 
-## Setup:
+### 3. Setup:
 
 1. Node JS
 2. VS Code Editor
 3. Playwright VS Code plugin
 
+### 4. Auto-waiting
+
+Playwright auto-waits for all the relevant checks to pass and only then performs the requested action. If the required checks do not pass within the given timeout, action fails with the TimeoutError.
+
+### 5. Playwright Test Recorder
+
+- Test Recorder helps to create test scripts by capturing the actions on the browser.
+
+```console
+npx playwright codegen
+```
+
+Note: Test Recorder can not capture all the actions.
+
+### 6. Reports, screenshot & videos
+
+- modify the options config file
+
+Example:
+
+```console
+// playwright.config.json
+
+  use: {
+    headless: false,
+    screenshot: "on", // "only-on-failure"
+    video: "on", // "retain-on-failure"
+  },
+  retries: 2, // number of retry to fail test
+  reporter: [
+    ["dot"],
+    [
+      "json",
+      {
+        outputFile: "jsonReports/jsonReport.json",
+      },
+    ],
+    [
+      "html",
+      {
+        open: "never",
+      },
+    ],
+  ],
+```
+
+- run the test command
+
+```console
+npx playwright test
+```
+
 ## Reference:
 
 - [Playwright Official Docs](https://playwright.dev/)
+- [Auto-waiting](https://playwright.dev/docs/actionability)
 - [LamdaTest](https://ecommerce-playground.lambdatest.io/)
+- [LamdaTest Playground](https://www.lambdatest.com/selenium-playground/)
