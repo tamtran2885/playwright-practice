@@ -1,15 +1,21 @@
 {
-  "name": "playwright-demo",
+  "name": "playwright-practice",
   "version": "1.0.0",
-  "description": "- The playwright is a Node.js library to automate Chromium, Firefox, and WebKit with a single API. Playwright is built to enable cross-browser web testing.",
+  "description": "1. Node JS\r 2. VS Code Editor\r 3. Playwright VS Code plugin",
   "main": "index.js",
-  "scripts": {
-    "test": "npx playwright test"
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamtran2885/playwright-practice.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tamtran2885/playwright-practice/issues"
+  },
+  "homepage": "https://github.com/tamtran2885/playwright-practice#readme",
   "devDependencies": {
-    "@playwright/test": "^1.27.1"
+    "@playwright/test": "^1.28.0"
   }
 }
