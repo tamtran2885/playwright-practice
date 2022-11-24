@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test("Login Test 1", async ({ page }) => {
+test.only("Login Test 1", async ({ page }) => {
   await page.goto("https://demo.applitools.com/");
 
   // await page.pause();
@@ -12,7 +12,7 @@ test("Login Test 1", async ({ page }) => {
   await page.locator("text=Sign in").click();
 });
 
-test.only("Login Test 2", async ({ page }) => {
+test("Login Test 2", async ({ page }) => {
   await page.goto(
     "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
   );
